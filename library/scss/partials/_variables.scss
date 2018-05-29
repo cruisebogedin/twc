@@ -1,0 +1,56 @@
+/******************************************************************
+
+Stylesheet: Variables
+
+******************************************************************/
+
+/*********************
+COLORS
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #323944;
+$white:             #fff;
+
+$light-gray:        #f8f9fa;
+$gray:              #eaedf2;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+
+$green:             #7dd667;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$link-color:        $bones-pink;
+$link-hover:        darken($link-color, 9%);
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+
+/*********************
+TWC COLORS
+*********************/
+
+$twc-lightblue:     #34bdf4;
+$twc-lightblue2:    #00acf1;
+$twc-darkblue:      #262366;
+$twc-red:           #ad0000;
+$twc-lightgrey:     #e5e5e5;
+$twc-gold:          #eece85;
+
+.bg-twc-lightblue {    background-color: $twc-lightblue; }
+.bg-twc-lightblue2 {   background-color: $twc-lightblue2; }
+.bg-twc-darkblue {     background-color: $twc-darkblue; }
+.bg-twc-red {          background-color: $twc-red; }
+.bg-twc-lightgrey {    background-color: $twc-lightgrey; }
+.bg-twc-gold {         background-color: $twc-gold; }

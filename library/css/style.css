@@ -1,0 +1,1190 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+
+Stylesheet: Main Stylesheet
+
+******************************************************************/
+/*********************
+IMPORTING PARTIALS
+*********************/
+/******************************************************************
+
+Stylesheet: Variables
+
+******************************************************************/
+/*********************
+COLORS
+http://0to255.com/
+*********************/
+/*********************
+TWC COLORS
+*********************/
+/* line 51, ../scss/partials/_variables.scss */
+.bg-twc-lightblue {
+  background-color: #34bdf4;
+}
+
+/* line 52, ../scss/partials/_variables.scss */
+.bg-twc-lightblue2 {
+  background-color: #00acf1;
+}
+
+/* line 53, ../scss/partials/_variables.scss */
+.bg-twc-darkblue {
+  background-color: #262366;
+}
+
+/* line 54, ../scss/partials/_variables.scss */
+.bg-twc-red {
+  background-color: #ad0000;
+}
+
+/* line 55, ../scss/partials/_variables.scss */
+.bg-twc-lightgrey {
+  background-color: #e5e5e5;
+}
+
+/* line 56, ../scss/partials/_variables.scss */
+.bg-twc-gold {
+  background-color: #eece85;
+}
+
+/******************************************************************
+
+Stylesheet: Typography
+
+******************************************************************/
+/*********************
+FONT FACE 
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 45, ../scss/partials/_typography.scss */
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/******************************************************************
+
+Stylesheet: Sass Functions
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/******************************************************************
+Stylesheet: Mixins Stylesheet
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*********************
+CSS3 GRADIENTS
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/*********************
+IMPORTING MODULES
+*********************/
+/*********************
+BASE (MOBILE) SIZE
+*********************/
+/******************************************************************
+Stylesheet: Base Mobile Stylesheet
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/* line 10, ../scss/breakpoints/_base.scss */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #5c6b80;
+  background-color: #eaedf2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+/* for sites that are read right to left (i.e. hebrew) */
+/* home page */
+/* blog template page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* parent page template */
+/* child page template */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 65, ../scss/breakpoints/_base.scss */
+.wrap {
+  width: 96%;
+  margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+/* line 74, ../scss/breakpoints/_base.scss */
+a, a:visited {
+  color: #f01d4f;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+/* line 78, ../scss/breakpoints/_base.scss */
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #d10e3c;
+}
+/* line 88, ../scss/breakpoints/_base.scss */
+a:link, a:visited:link {
+  /*
+  this highlights links on iPhones/iPads.
+  so it basically works like the :hover selector
+  for mobile devices.
+  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+/* line 102, ../scss/breakpoints/_base.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */
+}
+/* line 111, ../scss/breakpoints/_base.scss */
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  text-decoration: none;
+}
+
+/* line 116, ../scss/breakpoints/_base.scss */
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+/* line 121, ../scss/breakpoints/_base.scss */
+h2, .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+/* line 127, ../scss/breakpoints/_base.scss */
+h3, .h3 {
+  font-size: 1.125em;
+}
+
+/* line 131, ../scss/breakpoints/_base.scss */
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 136, ../scss/breakpoints/_base.scss */
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 147, ../scss/breakpoints/_base.scss */
+.header {
+  background-color: #323944;
+}
+
+/* line 151, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0;
+}
+/* line 154, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+/* line 171, ../scss/breakpoints/_base.scss */
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 175, ../scss/breakpoints/_base.scss */
+.nav li {
+  /*
+  so you really have to rethink your dropdowns for mobile.
+  you don't want to have it expand too much because the
+  screen is so small. How you manage your menu should
+  depend on the project. Here's some great info on it:
+  http://www.alistapart.com/articles/organizing-mobile/
+  */
+}
+/* line 177, ../scss/breakpoints/_base.scss */
+.nav li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75em;
+  /*
+  remember this is for mobile ONLY, so there's no need
+  to even declare hover styles here, you can do it in
+  the style.scss file where it's relevant. We want to
+  keep this file as small as possible!
+  */
+}
+/* line 210, ../scss/breakpoints/_base.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+}
+
+/* end .nav */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 246, ../scss/breakpoints/_base.scss */
+#content {
+  margin-top: 1.5em;
+}
+
+/* line 250, ../scss/breakpoints/_base.scss */
+.hentry {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+  border: 1px solid #ccc;
+}
+/* line 256, ../scss/breakpoints/_base.scss */
+.hentry header {
+  border-bottom: 1px solid #f8f9fa;
+  padding: 1.5em;
+}
+/* line 261, ../scss/breakpoints/_base.scss */
+.hentry footer {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+/* line 265, ../scss/breakpoints/_base.scss */
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+/* line 272, ../scss/breakpoints/_base.scss */
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+
+/* want to style individual post classes? Booya! */
+/* post by id (i.e. post-3) */
+/* general post style */
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+/* line 297, ../scss/breakpoints/_base.scss */
+.byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* entry content */
+/* line 306, ../scss/breakpoints/_base.scss */
+.entry-content {
+  padding: 1.5em 1.5em 0;
+  /*
+  image alignment on a screen this size may be
+  a bit difficult. It's set to start aligning
+  and floating images at the next breakpoint,
+  but it's up to you. Feel free to change it up.
+  */
+}
+/* line 309, ../scss/breakpoints/_base.scss */
+.entry-content p {
+  margin: 0 0 1.5em;
+}
+/* line 334, ../scss/breakpoints/_base.scss */
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em;
+}
+/* line 339, ../scss/breakpoints/_base.scss */
+.entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #9fa6b4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 348, ../scss/breakpoints/_base.scss */
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2;
+}
+/* line 351, ../scss/breakpoints/_base.scss */
+.entry-content tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+/* line 356, ../scss/breakpoints/_base.scss */
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2;
+}
+/* line 360, ../scss/breakpoints/_base.scss */
+.entry-content td:last-child {
+  border-right: 0;
+}
+/* line 365, ../scss/breakpoints/_base.scss */
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2;
+}
+/* line 370, ../scss/breakpoints/_base.scss */
+.entry-content th:last-child {
+  border-right: 0;
+}
+/* line 375, ../scss/breakpoints/_base.scss */
+.entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #2980b9;
+  font-style: italic;
+  color: #9fa6b4;
+}
+/* line 390, ../scss/breakpoints/_base.scss */
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+/* line 397, ../scss/breakpoints/_base.scss */
+.entry-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+/* line 413, ../scss/breakpoints/_base.scss */
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+/* line 422, ../scss/breakpoints/_base.scss */
+.entry-content pre {
+  background: #323944;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* end .entry-content */
+/* line 433, ../scss/breakpoints/_base.scss */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+/* line 439, ../scss/breakpoints/_base.scss */
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+/* line 445, ../scss/breakpoints/_base.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/* line 479, ../scss/breakpoints/_base.scss */
+.tags {
+  margin: 0;
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+/* line 487, ../scss/breakpoints/_base.scss */
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+
+/* line 491, ../scss/breakpoints/_base.scss */
+.pagination {
+  text-align: center;
+}
+/* line 494, ../scss/breakpoints/_base.scss */
+.pagination ul {
+  display: inline-block;
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+/* line 503, ../scss/breakpoints/_base.scss */
+.pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid #eaedf2;
+}
+/* line 512, ../scss/breakpoints/_base.scss */
+.pagination a, .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #2980b9;
+}
+/* line 524, ../scss/breakpoints/_base.scss */
+.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+  background-color: #2980b9;
+  color: #fff;
+}
+/* line 530, ../scss/breakpoints/_base.scss */
+.pagination .current {
+  cursor: default;
+  color: #5c6b80;
+}
+/* line 534, ../scss/breakpoints/_base.scss */
+.pagination .current:hover, .pagination .current:focus {
+  background-color: #fff;
+  color: #5c6b80;
+}
+
+/* end .bones_page_navi */
+/* fallback previous & next links */
+/* line 547, ../scss/breakpoints/_base.scss */
+.wp-prev-next .prev-link {
+  float: left;
+}
+/* line 551, ../scss/breakpoints/_base.scss */
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+/* line 562, ../scss/breakpoints/_base.scss */
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa;
+  /* number of comments span */
+}
+
+/* line 582, ../scss/breakpoints/_base.scss */
+.commentlist {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 587, ../scss/breakpoints/_base.scss */
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */
+}
+/* line 594, ../scss/breakpoints/_base.scss */
+.comment .comment-author {
+  padding: 7px;
+  border: 0;
+}
+/* line 600, ../scss/breakpoints/_base.scss */
+.comment .vcard {
+  margin-left: 50px;
+}
+/* line 603, ../scss/breakpoints/_base.scss */
+.comment .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+/* line 611, ../scss/breakpoints/_base.scss */
+.comment .vcard time {
+  display: block;
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* line 616, ../scss/breakpoints/_base.scss */
+.comment .vcard time a {
+  color: #9fa6b4;
+  text-decoration: none;
+}
+/* line 620, ../scss/breakpoints/_base.scss */
+.comment .vcard time a:hover {
+  text-decoration: underline;
+}
+/* line 630, ../scss/breakpoints/_base.scss */
+.comment .vcard .avatar {
+  position: absolute;
+  left: 16px;
+  border-radius: 50%;
+}
+/* line 638, ../scss/breakpoints/_base.scss */
+.comment:last-child {
+  margin-bottom: 0;
+}
+/* line 642, ../scss/breakpoints/_base.scss */
+.comment .children {
+  margin: 0;
+  /* variations */
+  /* change number for different depth */
+}
+/* line 660, ../scss/breakpoints/_base.scss */
+.comment[class*=depth-] {
+  margin-top: 1.1em;
+}
+/* line 664, ../scss/breakpoints/_base.scss */
+.comment.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+/* line 669, ../scss/breakpoints/_base.scss */
+.comment:not(.depth-1) {
+  margin-top: 0;
+  margin-left: 7px;
+  padding: 7px;
+}
+/* line 682, ../scss/breakpoints/_base.scss */
+.comment.odd {
+  background-color: #fff;
+}
+/* line 685, ../scss/breakpoints/_base.scss */
+.comment.even {
+  background: #f8f9fa;
+}
+
+/* comment meta */
+/* comment content */
+/* line 719, ../scss/breakpoints/_base.scss */
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* end .commentlist .comment_content */
+/* comment reply link */
+/* line 728, ../scss/breakpoints/_base.scss */
+.comment-reply-link {
+  font-size: 0.9em;
+  float: right;
+}
+
+/* end .commentlist .comment-reply-link */
+/* edit comment link */
+/* line 739, ../scss/breakpoints/_base.scss */
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+/* line 752, ../scss/breakpoints/_base.scss */
+.comment-respond {
+  clear: both;
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+
+/* line 758, ../scss/breakpoints/_base.scss */
+#reply-title {
+  margin: 0;
+}
+
+/* line 762, ../scss/breakpoints/_base.scss */
+.logged-in-as {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+/* line 767, ../scss/breakpoints/_base.scss */
+.logged-in-as a {
+  color: #5c6b80;
+}
+
+/* line 772, ../scss/breakpoints/_base.scss */
+.comment-form-comment {
+  margin: 1.5em 0 0.75em;
+}
+
+/* line 776, ../scss/breakpoints/_base.scss */
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+}
+
+/* comment submit button */
+/* line 783, ../scss/breakpoints/_base.scss */
+#submit {
+  float: right;
+  font-size: 1em;
+}
+
+/* comment form title */
+/* line 789, ../scss/breakpoints/_base.scss */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+/* line 802, ../scss/breakpoints/_base.scss */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+/* line 807, ../scss/breakpoints/_base.scss */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 823, ../scss/breakpoints/_base.scss */
+.widget ul li {
+  /* deep nesting */
+}
+
+/* line 840, ../scss/breakpoints/_base.scss */
+.no-widgets {
+  background-color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* line 853, ../scss/breakpoints/_base.scss */
+.footer {
+  clear: both;
+  background-color: #323944;
+  color: #f8f9fa;
+}
+
+/*
+if you checked out the link above:
+http://www.alistapart.com/articles/organizing-mobile/
+you'll want to style the footer nav
+a bit more in-depth. Remember to keep
+it simple because you'll have to
+override these styles for the desktop
+view.
+*/
+/* end .footer-links */
+/*********************
+LARGER MOBILE DEVICES
+*********************/
+@media only screen and (min-width: 576px) {
+  /******************************************************************
+  Stylesheet: 481px and Up Stylesheet
+  ******************************************************************/
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  /* line 13, ../scss/breakpoints/_576up.scss */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 17, ../scss/breakpoints/_576up.scss */
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 22, ../scss/breakpoints/_576up.scss */
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 27, ../scss/breakpoints/_576up.scss */
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+  /* end .entry-content */
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+*********************/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  /* line 18, ../scss/breakpoints/_768up.scss */
+  .wrap {
+    width: 760px;
+  }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* line 34, ../scss/breakpoints/_768up.scss */
+  .nav {
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 36, ../scss/breakpoints/_768up.scss */
+  .nav ul {
+    background: #323944;
+    margin-top: 0;
+  }
+  /* line 40, ../scss/breakpoints/_768up.scss */
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */
+  }
+  /* line 44, ../scss/breakpoints/_768up.scss */
+  .nav li a {
+    border-bottom: 0;
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+  /* line 51, ../scss/breakpoints/_768up.scss */
+  .nav li a:hover, .nav li a:focus {
+    color: #fff;
+    text-decoration: underline;
+  }
+  /* line 63, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  /* line 72, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+    if you need to go deeper, go nuts
+    just remember deeper menus suck
+    for usability. k, bai.
+    */
+  }
+  /* line 74, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  /* line 91, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  /* line 101, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li ul,
+  .nav li ul.children li ul {
+    top: 0;
+    left: 100%;
+  }
+  /* line 116, ../scss/breakpoints/_768up.scss */
+  .nav li:hover > ul {
+    top: auto;
+    visibility: visible;
+  }
+
+  /* end .nav */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  /* line 136, ../scss/breakpoints/_768up.scss */
+  .sidebar {
+    margin-top: 2.2em;
+  }
+
+  /* line 140, ../scss/breakpoints/_768up.scss */
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+
+  /* line 145, ../scss/breakpoints/_768up.scss */
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  /* line 150, ../scss/breakpoints/_768up.scss */
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  /* line 158, ../scss/breakpoints/_768up.scss */
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  /* line 266, ../scss/breakpoints/_768up.scss */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */
+  }
+
+  /* end .footer-links */
+}
+/*********************
+DESKTOP
+*********************/
+@media only screen and (min-width: 992px) {
+  /******************************************************************
+  Stylesheet: Desktop Stylsheet
+  
+  ******************************************************************/
+  /* line 6, ../scss/breakpoints/_992up.scss */
+  .wrap {
+    width: 1040px;
+  }
+}
+/*********************
+LARGE VIEWING SIZE
+*********************/
+@media only screen and (min-width: 1200px) {
+  /******************************************************************
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  ******************************************************************/
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*********************
+PRINT STYLESHEET
+*********************/
+@media print {
+  /******************************************************************
+  
+  Stylesheet: Print Stylesheet
+  
+  
+  ******************************************************************/
+  /* line 8, ../scss/partials/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 16, ../scss/partials/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 21, ../scss/partials/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 26, ../scss/partials/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 31, ../scss/partials/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 37, ../scss/partials/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 42, ../scss/partials/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 46, ../scss/partials/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 50, ../scss/partials/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 58, ../scss/partials/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 63, ../scss/partials/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 69, ../scss/partials/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}
