@@ -11,6 +11,9 @@ sidebars, comments, etc.
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/bootstrap-navwalker.php';
+
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
 

@@ -2,13 +2,14 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="container clearfix">
+					<div class="row">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-md-9" clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
@@ -20,7 +21,7 @@
 
 								</header> <?php // end article header ?>
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -46,7 +47,7 @@
 									?>
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
+								<footer class="article-footer clearfix">
 
 								</footer>
 
@@ -60,8 +61,8 @@
 
 						<?php get_sidebar(); ?>
 
-				</div>
-
-			</div>
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /#content -->
 
 <?php get_footer(); ?>

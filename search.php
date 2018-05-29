@@ -2,14 +2,14 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="container clearfix">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<main id="main" class="m-all t-2of3 d-5of7 clearfix" role="main">
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 								<header class="entry-header article-header">
 
@@ -49,7 +49,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry clearfix">
 										<header class="article-header">
 											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
 										</header>

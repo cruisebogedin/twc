@@ -12,9 +12,11 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	  -moz-osx-font-smoothing: grayscale;
+	min-width: 315px;
+	overflow-x: hidden;
 }
 
 /********************
@@ -77,6 +79,7 @@ a, a:visited {
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
+		text-decoration: none;
 	}
 
 	/* on click */
@@ -86,11 +89,6 @@ a, a:visited {
 
 	/* mobile tap color */
 	&:link {
-		/*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
 }
@@ -102,12 +100,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
 
-	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
 	}
@@ -148,110 +141,96 @@ HEADER STYLES
 	background-color: $black;
 }
 
-	#logo {
-		margin: 0.75em 0;
-
-		a {
-			color: $white;
-		}
-	}
+h1.top-logo {
+	line-height: 0;
+	width: 200px;
+}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
+.navbar {
+	padding: 0;
+}
 
-.nav {
-	border-bottom: 0;
-	margin: 0;
+#menu-top-menu {
 
+	a {
+		color: $white !important;
+		&:hover, &:active, &:focus {
+			background-color: $twc-lightblue2;
+		}
+	}
 	li {
+		&:hover, &:active, &:focus {
+			background-color: $twc-lightblue2;
+		}
+	}
+	>li > a {
+		padding: 10px 15px;
+	}
 
+	.sub-menu {
+		background-color: #565e66!important;
+		margin: 0;
+  		border-top-right-radius: 0;
+  		border-top-left-radius: 0;
+  		border-top: 0;
+  		padding: 0;
+
+		> a {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+/*********************
+ARCHIVE STYLES
+*********************/
+.archive-box {
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	&:hover {
+		background-color: #333;
+		
 		a {
-			display: block;
-			color: $white;
-			text-decoration: none;
-			padding: 0.75em;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
-			}
+			color: $twc-lightblue;
 		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
-
-			li {
-
-				a {
-					padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
-			}
-
+		time {
+			color: $white !important;
 		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
-} /* end .nav */
+	}
+	
+	a {
+		color: $black;
+	}
+	
+	time {
+		color: $black !important;
+		text-decoration: none !important;
+		font-weight: bold;
+	}
+	
+	h1 {
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: bold;
+		height: 50px;
+		overflow: hidden;
+	}
+}
 
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
-	margin-top: 1.5em;
-}
+#content {}
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -275,23 +254,7 @@ POSTS & CONTENT STYLES
 			margin: 0;
 		}
 
-		.single-title {}
 
-		.page-title {}
-
-		.entry-title {}
-
-		.archive-title {}
-
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
 		/* post meta */
 		.byline {
@@ -400,16 +363,7 @@ POSTS & CONTENT STYLES
 				height: auto;
 			}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
-
+	
 			.size-auto,
 			.size-full,
 			.size-large,
@@ -450,35 +404,8 @@ POSTS & CONTENT STYLES
 
 		} /* end .wp-caption */
 
-		/* image gallery styles */
-		.gallery {
 
-			dl {
 
-				a {}
-
-				img {}
-
-			}
-
-			dt {}
-
-			dd {}
-
-		} /* end .gallery */
-
-		/* gallery caption styles */
-		.gallery-caption {}
-
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
-
-	// the tag output
-	.tags {
-		margin: 0;
-	}
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -812,7 +739,11 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	img {
+		max-width: 100%;
+	}
+}
 
 	.widgettitle {}
 
@@ -853,23 +784,28 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	background-color: $black;
-	color: $light-gray;
 }
 
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
+
 	.footer-links {
-
+		
 		ul {
+			display: inline;
 
-			li {}
+			li {
+				display: inline-block;
+				border-right: solid 1px $white;
+				margin: 5px 0;
+				
+				&:last-child {
+					border: none;
+				}
+				
+				a {
+					display: inline-block;
+					padding: 2px 10px;
+				}
+			}
 
 		}
 

@@ -14,8 +14,8 @@ $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
-$black:             #323944;
-$white:             #fff;
+$black:             #000000;
+$white:             #ffffff;
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
@@ -48,9 +48,13 @@ $twc-red:           #ad0000;
 $twc-lightgrey:     #e5e5e5;
 $twc-gold:          #eece85;
 
-.bg-twc-lightblue {    background-color: $twc-lightblue; }
-.bg-twc-lightblue2 {   background-color: $twc-lightblue2; }
-.bg-twc-darkblue {     background-color: $twc-darkblue; }
-.bg-twc-red {          background-color: $twc-red; }
-.bg-twc-lightgrey {    background-color: $twc-lightgrey; }
-.bg-twc-gold {         background-color: $twc-gold; }
+
+// BG COLORS
+.bg-black {				background-color: $black; 				}
+
+.bg-twc-lightblue {    background-color: $twc-lightblue; 		}
+.bg-twc-lightblue2 {   background-color: $twc-lightblue2;		}
+.bg-twc-darkblue {     background-color: $twc-darkblue; 		}
+.bg-twc-red {          background-color: $twc-red; 				}
+.bg-twc-lightgrey {    background-color: $twc-lightgrey; 		}
+.bg-twc-gold {         background-color: $twc-gold; 			}

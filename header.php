@@ -50,35 +50,55 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="top-bar" class="bg-twc-lightblue2">
-					<div class="wrap cf">
+					<div class="container clearfix py-2">
 
-					<img id="top-logo" class="img-fluid" alt="Two Wheel Cruise Cycling Life in Japan logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/TWC-two-wheel-cruise-cycling-japan-logo.png" /></a>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+						<h1 class="m-0 p-0 float-left top-logo">
+						<a href="<?php echo home_url(); ?>">
+							<img id="top-logo" class="img-fluid" alt="Two Wheel Cruise Cycling Life in Japan logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/TWC-two-wheel-cruise-cycling-japan-logo.png" /></a>
+						</a>
+						</h1>
+						
+						<p class="float-right p-0 m-0 social-nav-top">
+							<a class="btn btn-sm btn-light" role="button" href="https://youtube.com/twowheelcruise/" target="_blank">YouTube</a>
+						</p>
 
-					<?php // bloginfo('description'); ?>
-
+					</div><!-- /.container -->
 				</div><!-- /#top-bar -->
 
 				<div id="top-nav-bar" class="bg-dark text-white">
-					<div class="wrap cf">
+					
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
 
-					</nav>
-					</div><!-- /.wrap -->
+
+					<nav id="nav-top" class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<div class="container clearfix py-1 py-md-0">
+						<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarColor01">			  
+							<?php	wp_nav_menu(array(
+								'container' => 'false',                    		// enter '' to remove nav container 
+								'menu' => __( 'Top Menu', 'bonestheme' ),   	// nav name
+								'menu_class' => 'top-menu navbar-nav mr-auto',  // adding custom nav class
+								'theme_location' => 'top-menu',             	// where it's located in the theme
+								'depth' => 2,                                   // limit the depth of the nav
+								'walker'         => new Bootstrap_NavWalker(),
+								'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+							)); ?>
+						</div>
+
+						<form role="search" method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
+								<input class="form-control" type="search" id="s" name="s" value="<?php get_search_query() ?>" placeholder="search" aria-label="Search">
+								<button class="btn btn-outline-info my-2 my-sm-0 d-md-none" type="submit">Search</button>
+							</form>
+					
+					</div>
+					</nav>	
+
+
+
+
 				</div><!-- /#top-nav-bar --> 
 
 			</header>

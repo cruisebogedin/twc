@@ -2,9 +2,10 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="container clearfix">
+					<div class="row">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-md-9 clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -13,7 +14,7 @@
 							
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
 								<header class="entry-header article-header">
 
@@ -29,7 +30,7 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content clearfix">
 
 									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
@@ -49,7 +50,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry clearfix">
 										<header class="article-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
@@ -65,10 +66,12 @@
 
 						</main>
 
-					<?php get_sidebar(); ?>
+						<?php get_sidebar(); ?>
 
-				</div>
+					</div><!-- /.row -->
 
-			</div>
+				</div><!-- /.container -->
+
+			</div><!-- /# content -->
 
 <?php get_footer(); ?>

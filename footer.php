@@ -1,13 +1,19 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer class="footer text-center" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="wrap cf">
+				<div id="inner-footer" class="container clearfix py-3">
 
+					<p class="footer-logo">
+						<a href="<?php echo home_url(); ?>">
+							<img class="img-fluid" alt="Two Wheel Cruise Cycling Life in Japan logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/TWC-two-wheel-cruise-cycling-japan-logo.png" /></a>
+						</a>
+					</p>
+				
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't containerping)
+    					'container_class' => 'footer-links clearfix',         // class of container (should you choose to use it)
     					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
+    					'menu_class' => 'nav footer-nav clearfix',            // adding custom nav class
     					'theme_location' => 'footer-links',             // where it's located in the theme
     					'before' => '',                                 // before the menu
     					'after' => '',                                  // after the menu
@@ -18,7 +24,7 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="source-org copyright">&copy; 2015 - <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 				</div>
 
