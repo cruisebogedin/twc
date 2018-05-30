@@ -1,10 +1,10 @@
-			<footer class="footer text-center" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer class="footer text-center text-white" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
 				<div id="inner-footer" class="container clearfix py-3">
 
 					<p class="footer-logo">
 						<a href="<?php echo home_url(); ?>">
-							<img class="img-fluid" alt="Two Wheel Cruise Cycling Life in Japan logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/TWC-two-wheel-cruise-cycling-japan-logo.png" /></a>
+							<img class="img-fluid" alt="Two Wheel Cruise Cycling Life in Japan logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/TWC-two-wheel-cruise-cycling-japan-logo.png" />
 						</a>
 					</p>
 				
@@ -25,6 +25,11 @@
 					</nav>
 
 					<p class="source-org copyright">&copy; 2015 - <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					
+					<p><a target="_blank" href="https://youtube.com/twowheelcruise/">
+							<img class="img-fluid" alt="Two Wheel Cruise YouTube Channel" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/youtube-logo.png" />
+						</a>
+					</p>
 
 				</div>
 

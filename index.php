@@ -16,12 +16,22 @@
 			<?php }  ?>
 							
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			
+				<?php 
+				$cat = new WPSEO_Primary_Term('category', get_the_ID());
+				$cat = $cat->get_primary_term();
+				$catName = get_cat_name($cat);
+				$catLink = get_category_link($cat);
+				?>
 
 				<div class="col-md-6 col-lg-4 archive-box">
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 				<a class="archive-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 						
-					<?php the_post_thumbnail('medium', ['class' => 'img-fluid archive-thumb']); ?>
+					<div class="archive-img-wrap">
+						<?php the_post_thumbnail('medium', ['class' => 'img-fluid archive-thumb']); ?>
+						<p class="main-cat"><?php echo $catName; ?></p>
+					</div>
 
 					<p class="byline entry-meta vcard">
 						<?php echo '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'; ?>

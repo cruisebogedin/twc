@@ -59,7 +59,9 @@
 						</h1>
 						
 						<p class="float-right p-0 m-0 social-nav-top">
-							<a class="btn btn-sm btn-light" role="button" href="https://youtube.com/twowheelcruise/" target="_blank">YouTube</a>
+							<a class="btn btn-sm btn-dark" role="button" target="_blank" href="https://youtube.com/twowheelcruise/">
+								<img class="img-fluid yt-logo-top" alt="Two Wheel Cruise YouTube Channel" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/youtube-logo.png" />
+							</a>
 						</p>
 
 					</div><!-- /.container -->

@@ -1,68 +1,60 @@
 <?php get_header(); ?>
 
-			<div id="content">
+	<div id="content">
 
-				<div id="inner-content" class="container clearfix">
-					<div class="row">
+		<div id="inner-content" class="container clearfix">
 
-						<main id="main" class="col-md-9" clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				<main id="main" class="clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+						<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+						
+						<header class="article-header">
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							<?php 
+							$banner_id = get_field('banner_image');
+							if( get_field('video_embed') ) { // IF VIDEO grab embed ?>
+								<div id="video-head" class="mb-3 full-w">
+									<div class="embed-responsive embed-responsive-16by9"><?php the_field('video_embed'); ?></p></div>
+								</div>
+							<?php } else if ($banner_id) { 
+								$size = "full";
+								$image = wp_get_attachment_image_src( $banner_id, $size ); ?>
+								<div class="single-banner mb-1 full-w">
+									<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid" />
+								</div>
+							<?php } else if (has_post_thumbnail() ) { 
+								echo '<div class="single-banner mb-1 full-w">';
+									the_post_thumbnail('full', array('class' => 'img-fluid', 'style' => 'width:100%;')); 
+								echo '</div>';
+							}
+							?>
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'bonestheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'bonestheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
+						</header> <?php // end article header ?>
 
-								</header> <?php // end article header ?>
+						<section class="entry-content clearfix" itemprop="articleBody">
+							<?php the_content(); ?>
+						</section> <?php // end article section ?>
 
-								<section class="entry-content clearfix" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
+						<footer class="article-footer clearfix">
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
+						</footer>
 
-								<footer class="article-footer clearfix">
+						<?php // Edit post link
+							edit_post_link( __('Edit'), '', '', 0, 'post-edit-link btn btn-warning btn-lg btn-block mt-3 mb-3' );
+						?>
 
-								</footer>
+					</article>
 
-								<?php comments_template(); ?>
+					<?php endwhile; endif; ?>
 
-							</article>
+				</main>
 
-							<?php endwhile; endif; ?>
-
-						</main>
-
-						<?php get_sidebar(); ?>
-
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /#content -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</div><!-- /#content -->
 
 <?php get_footer(); ?>
