@@ -12,13 +12,21 @@
 
 								<header class="article-header entry-header">
 								
-									<?php if( get_field('video_embed') ) { // IF VIDEO grab embed ?>
+									<?php 
+									$banner_id = get_field('banner_image');
+									if( get_field('video_embed') ) { // IF VIDEO grab embed ?>
 										<div id="video-head" class="mb-3 full-w">
 											<div class="embed-responsive embed-responsive-16by9"><?php the_field('video_embed'); ?></p></div>
 										</div>
+									<?php } else if ($banner_id) { 
+										$size = "full";
+										$image = wp_get_attachment_image_src( $banner_id, $size ); ?>
+										<div class="single-banner mb-1 full-w">
+											<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(); ?>" class="img-fluid" />
+										</div>
 									<?php } else if (has_post_thumbnail() ) { 
 										echo '<div class="single-banner mb-1 full-w">';
-											the_post_thumbnail('large', array('class' => 'img-fluid', 'style' => 'width:100%;')); 
+											the_post_thumbnail('full', array('class' => 'img-fluid', 'style' => 'width:100%;')); 
 										echo '</div>';
 									}
 									?>

@@ -24,14 +24,23 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
-
-	#logo {}
+h1.top-logo {
+	width: 400px;
+}
+.yt-logo-top,
+.shop-logo-top {
+	height: 18px; 
+}
 
 /*********************
 NAVIGATION STYLES
 *********************/
+#menu-top-menu {
 
+	>li > a {
+		padding: 13px 15px;
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES

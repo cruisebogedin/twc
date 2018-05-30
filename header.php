@@ -59,7 +59,10 @@
 						</h1>
 						
 						<p class="float-right p-0 m-0 social-nav-top">
-							<a class="btn btn-sm btn-dark" role="button" target="_blank" href="https://youtube.com/twowheelcruise/">
+							<a class="btn btn-sm btn-dark line-height-0" role="button" href="/shop/">
+								<img class="img-fluid shop-logo-top" alt="TWC Shop" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/twc-shop.png" />
+							</a>
+							<a class="btn btn-sm btn-dark line-height-0" role="button" target="_blank" href="https://youtube.com/twowheelcruise/">
 								<img class="img-fluid yt-logo-top" alt="Two Wheel Cruise YouTube Channel" src="<?php echo get_template_directory_uri(); ?>/library/images/logos/youtube-logo.png" />
 							</a>
 						</p>
@@ -68,13 +71,10 @@
 				</div><!-- /#top-bar -->
 
 				<div id="top-nav-bar" class="bg-dark text-white">
-					
-
-
-
+					<div class="container clearfix">
 					<nav id="nav-top" class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<div class="container clearfix py-1 py-md-0">
-						<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					
+						<button class="my-1 navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 
@@ -90,17 +90,14 @@
 							)); ?>
 						</div>
 
-						<form role="search" method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
-								<input class="form-control" type="search" id="s" name="s" value="<?php get_search_query() ?>" placeholder="search" aria-label="Search">
-								<button class="btn btn-outline-info my-2 my-sm-0 d-md-none" type="submit">Search</button>
-							</form>
+						<form id="top-search" role="search" method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
+							<input class="form-control" type="search" id="s" name="s" value="<?php get_search_query() ?>" placeholder="search" aria-label="Search">
+							<button class="btn btn-outline-info" type="submit">Go</button>
+						</form>
 					
-					</div>
+					
 					</nav>	
-
-
-
+					</div>
 
 				</div><!-- /#top-nav-bar --> 
-
 			</header>

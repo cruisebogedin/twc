@@ -8,10 +8,18 @@ HEADER STYLES
 *********************/
 
 h1.top-logo {
-	width: 400px;
+	width: 250px;
 }
-.yt-logo-top {
-	width: 80px; 
+.yt-logo-top,
+.shop-logo-top {
+	height: 14px; 
+}
+
+#top-search {
+
+	#s {
+		width: 70%;
+	}
 }
 
 /*********************

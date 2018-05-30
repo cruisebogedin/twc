@@ -15,7 +15,7 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
-	min-width: 315px;
+	min-width: 300px;
 	overflow-x: hidden;
 }
 
@@ -174,13 +174,30 @@ HEADER STYLES
 
 h1.top-logo {
 	line-height: 0;
-	width: 200px;
+	width: 170px;
 }
 
-.yt-logo-top {
-	width: 50px; 
-	height: auto;
+.yt-logo-top,
+.shop-logo-top {
+	height: 11px; 
+	width: auto;
 }
+
+#top-search {
+
+	#s {
+		position: absolute;
+		top: 6px;
+		width: 60%;
+		right: 50px;
+	}
+	button {
+		position: absolute;
+		top: 6px;
+		right: 0;
+	}
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -189,6 +206,9 @@ NAVIGATION STYLES
 	padding: 0;
 }
 
+#top-nav-bar {
+	min-height: 50px;
+}
 #menu-top-menu {
 
 	a {
@@ -301,8 +321,6 @@ POSTS & CONTENT STYLES
 		.hentry {
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding-bottom: 15px;
 				margin-bottom: 15px;
 			}
 
@@ -668,4 +686,7 @@ MISC CLASSES
 .narrow-content {
 	max-width: 600px;
 	margin: 0 auto;
+}
+.line-height-0 {
+	line-height: 0;
 }
