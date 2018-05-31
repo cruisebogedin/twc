@@ -74,7 +74,7 @@
 
 								<div class="col-6 col-lg-3 similar-box">
 									<a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>">
-										<?php the_post_thumbnail(); ?>
+										<?php the_post_thumbnail('small'); ?>
 										<h3 class="h5 mt-1 mb-0"><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></h3>
 									</a>
 								</div>
